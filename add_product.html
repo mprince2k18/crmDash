@@ -12,6 +12,8 @@
 <!-- BEGIN:VENDOR CSS -->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/plugins/dropify/css/dropify.min.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="assets/plugins/select2/select2.css" />
 <!-- END:VENDOR CSS -->
 
 <!-- BEGIN:LIBRARY CSS -->
@@ -463,11 +465,10 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>eCommerce Dashboard</h2>
+                    <h2>CRM Dashboard</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                        <li class="breadcrumb-item">eCommerce</li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item">Add Product</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -488,7 +489,7 @@
                <div class="col-lg-12 col-md-12 col-sm-12">
                    <div class="card">
                        <div class="header">
-                           <h2><strong>Basic</strong> Validation</h2>
+                           <h2><strong>Add</strong> Product</h2>
                            <ul class="header-dropdown">
                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                    <ul class="dropdown-menu dropdown-menu-right">
@@ -505,40 +506,107 @@
                        <div class="body">
                            <form id="form_validation" method="POST">
                                <div class="form-group form-float">
-                                   <input type="text" class="form-control" placeholder="Name" name="name" required>
+                                   <input type="text" class="form-control" placeholder="Product Name" name="name" required>
                                </div>
                                <div class="form-group form-float">
-                                   <input type="text" class="form-control" placeholder="Surname" name="surname" required>
+                                   <input type="text" class="form-control" placeholder="Product Price" name="surname" required>
                                </div>
                                <div class="form-group form-float">
-                                   <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                   <input type="text" class="form-control" placeholder="Product Quantity" name="email" required>
                                </div>
-                               <div class="form-group">
-                                   <div class="radio inlineblock m-r-20">
-                                       <input type="radio" name="gender" id="male" class="with-gap" value="option1">
-                                       <label for="male">Male</label>
-                                   </div>
-                                   <div class="radio inlineblock">
-                                       <input type="radio" name="gender" id="Female" class="with-gap" value="option2" checked="">
-                                       <label for="Female">Female</label>
-                                   </div>
-                               </div>
+                     
+
                                <div class="form-group form-float">
-                                   <textarea name="description" cols="30" rows="5" placeholder="Description" class="form-control no-resize" required></textarea>
-                               </div>
+                                        
+                                        <select class="form-control show-tick ms select2"
+                                            data-placeholder="Product Category">
+                                            <option></option>
+                                            <option>Mustard</option>
+                                            <option>Ketchup</option>
+                                            <option>Relish</option>
+                                        </select>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    
+                                    <select class="form-control show-tick ms select2"
+                                        data-placeholder="Product Subcategory">
+                                        <option></option>
+                                        <option>Alu</option>
+                                        <option>Potol</option>
+                                        <option>Kola</option>
+                                    </select>
+                                </div>
+
+                                          
                                <div class="form-group form-float">
-                                   <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                   <textarea name="Product Description" cols="30" rows="5" placeholder="Description" class="form-control no-resize" required></textarea>
                                </div>
+
+                               <div class="form-group form-float">
+
+                                   <select class="form-control show-tick ms select2"
+                                       data-placeholder="Brand">
+                                       <option></option>
+                                       <option>Sony</option>
+                                       <option>Samsung</option>
+                                   </select>
+                               </div>
+
+                                <div class="form-group form-float">
+                                    
+                                    <select class="form-control show-tick ms select2"
+                                        data-placeholder="Product Activation">
+                                        <option></option>
+                                        <option>Active</option>
+                                        <option>Deactive</option>
+                                    </select>
+                                </div>
 
                                <div class="form-group form-float">
                                  <div class="card">
                                     <div class="header">
-                                        <h2>Default</h2>
+                                        <h2>Feature Photo</h2>
                                     </div>
                                     <div class="body">
                                         <input type="file" class="dropify">
                                     </div>
                                 </div>
+                               </div>
+
+                               <div class="form-group form-float">
+                                   <div class="row">
+                                       <div class="col-md-4">
+                                           <div class="card">
+                                               <div class="header">
+                                                   <h2>Child Photo</h2>
+                                               </div>
+                                               <div class="body">
+                                                   <input type="file" class="dropify">
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                           <div class="card">
+                                               <div class="header">
+                                                   <h2>Child Photo</h2>
+                                               </div>
+                                               <div class="body">
+                                                   <input type="file" class="dropify">
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                           <div class="card">
+                                               <div class="header">
+                                                   <h2>Child Photo</h2>
+                                               </div>
+                                               <div class="body">
+                                                   <input type="file" class="dropify">
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
                                </div>
 
                                <div class="form-group">
@@ -574,6 +642,9 @@
 <script src="assets/plugins/jquery-steps/jquery.steps.js"></script> <!-- JQuery Steps Plugin Js -->
 <script src="assets/plugins/dropify/js/dropify.min.js"></script>
 
+<script src="assets/plugins/select2/select2.min.js"></script> <!-- Select2 Js -->
+<script src="assets/js/pages/forms/advanced-form-elements.js"></script>
+
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
 <script src="assets/js/pages/forms/dropify.js"></script>
 <script src="assets/js/pages/forms/form-validation.js"></script>
@@ -585,6 +656,8 @@
 
 
 <!-- BEGIN:custom js -->
+
+
 
 <!-- END:custom js -->
 
